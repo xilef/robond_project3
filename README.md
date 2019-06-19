@@ -1,4 +1,4 @@
-# Ball chaser
+# AMCL (Advanced Monte Carlo Localization)
 
 Submission for Project 3 of the Udacity Robotics Software Engineer Nanodegree Program. This repository contains an additional amcl node to perform localization
 
