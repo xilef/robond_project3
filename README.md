@@ -1,8 +1,6 @@
 # Ball chaser
 
-Submission for Project 2 of the Udacity Robotics Software Engineer Nanodegree Program. This repository contains a robot that has the following features:
-- Chase a solid colored ball if it is within camera view.
-- If it is chasing a ball and it goes out of camera view, seek the ball by turning approximately 360 degrees then give up until a new ball is seen.
+Submission for Project 3 of the Udacity Robotics Software Engineer Nanodegree Program. This repository contains an additional amcl node to perform localization
 
 ## How to run
 
@@ -12,7 +10,7 @@ Make sure you have gazebo and rviz installed and you have setup a catkin workspa
 Clone the repo to your catkin workspace's src folder
 
 eg:
-`git clone https://github.com/xilef/robond_project1 /home/robond/workspace/catkin_ws/src
+`git clone https://github.com/xilef/robond_project3 /home/robond/workspace/catkin_ws/src
 `
 
 Go to the root of your catkin workspace and run `catkin_make` to build the whole repo
@@ -29,9 +27,12 @@ to load the world.
 
 Open a new terminal, navigate to your catkin workspace and run:
 
-`roslaunch ball_chaser ball_chaser.launch`
+`roslaunch my_robot amcl.launch`
 
-to run the ball chasing service
+to run the amcl node for localization
+
+Once everything has loaded you can either try to send navigation goals via rviz or manually move the robot via the teleop package.
+`rosrun teleop_twist_keyboard teleop_twist_keyboard.py`
 
 ## License
 
